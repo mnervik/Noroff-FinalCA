@@ -1,0 +1,100 @@
+$blue: dodgerblue;
+
+main {
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &.login {
+    margin-top: 50%;
+
+    form {
+      input[type="text"], input[type="password"] {
+        width: 150px;
+      }
+
+      [type="button"], [type="submit"] {
+        padding: 4px 10px;
+      }
+    }
+  }
+
+  .card-container {
+    width: 225px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  background-color: dodgerblue;
+  height: 80px;
+
+  #title {
+    color: white;
+    line-height: 80px;
+    margin-left: 20px;
+    font-size: 36px;
+  }
+}
+
+nav {
+  top: 20px;
+  right: 5%;
+  position: absolute;
+
+  ul {
+    list-style-type: none;
+
+    a {
+      margin-left: 20px;
+      color: white;
+      font-size: 18px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+      }
+
+      &.active {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+}
+
+form#contact {
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+    }
+
+    input[type="submit"] {
+      background-color: $blue;
+      color: white;
+      padding: 8px;
+      font-size: 16px;
+    }
+  }
+
+  .error {
+    color: red;
+    display: none;
+  }
+}
+
+#search-form {
+  margin-top: 15px;
+
+  * {
+    height: 30px;
+  }
+}

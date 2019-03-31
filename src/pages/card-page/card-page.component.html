@@ -1,0 +1,26 @@
+<main>
+  <!--<div class="container">
+    <div class="card-container" *ngFor="let card of idArr; let i = index">
+      <h4>{{nameArr[i]}}</h4>
+      <img src="{{imageArr[i]}}">
+      <h4>id: {{idArr[i]}}</h4>
+      <a class="btn btn-success" (click)="cardClick(idArr[i])">View More</a>
+    </div>
+  </div>-->
+
+  <div class="container">
+    <div class="card-container">
+      <h4>{{card.name}}</h4>
+      <img src="{{card.image}}">
+      <button class="btn btn-cancel" (click)="goBack()" style="display: block; text-align: center; margin: 0 auto">
+        Go Back
+      </button>
+
+      <div class="card-info">
+        <p>About: {{card.about}}</p>
+        <p>Rarity: {{card.rarity}}</p>
+        <p>Colors: {{card.color.join()}}</p>
+      </div>
+    </div>
+  </div>
+</main>

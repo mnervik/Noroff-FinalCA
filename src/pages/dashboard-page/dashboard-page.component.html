@@ -1,0 +1,29 @@
+<header>
+  <span id="title">Card Game</span>
+  <nav>
+    <ul>
+      <li>
+        <a class="active">Home</a>
+        <a (click)="goAbout()">About Us</a>
+        <a (click)="goContact()">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+    <form [formGroup]="form" id="search-form" (keyup)="onSubmit()">
+      <input type="search" formControlName="input" placeholder="Type something">
+      <input type="submit" id="search-button" value="Search">
+    </form>
+
+    <section id="card-section">
+      <div class="card-container" *ngFor="let item of idArr; let i = index" (click)="cardClick(idArr[i])">
+        <h4>{{nameArr[i]}}</h4>
+        <img src="{{imageArr[i]}}">
+        <button class="btn btn-success" style="display: block; text-align: center; margin: 0 auto">View More</button>
+      </div>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,48 @@
+main {
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  hr {
+    width: 80%;
+    opacity: 0.5;
+  }
+
+  .card {
+    display: inline-block;
+    width: 500px;
+    text-align: center;
+
+    margin-right: 20px;
+    margin-top: 5px;
+    padding: 5px;
+
+    h2 {
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-container {
+    float: left;
+
+    border: solid 1px lightgrey;
+    border-top: 10px solid #3a99cd;
+    margin-top: 30px;
+    margin-left: 5px;
+    padding: 15px;
+
+    &:hover {
+      box-shadow: 5px 5px 2.5px #888888;
+      cursor: pointer;
+    }
+  }
+
+}

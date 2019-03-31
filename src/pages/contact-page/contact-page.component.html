@@ -1,0 +1,44 @@
+<header>
+  <span id="title">Card Game</span>
+  <nav>
+    <ul>
+      <li>
+        <a (click)="goHome()">Home</a>
+        <a (click)="goAbout()">About Us</a>
+        <a class="active">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Contact us Form</h2>
+  <form [formGroup]="form" id="contact" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="fname">Name:</label>
+      <input type="text" formControlName="fname" id="fname" value="{{name.first}}">
+
+    </div>
+
+    <div class="form-group">
+      <label for="lname">Last Name:</label>
+      <input type="text" formControlName="lname" id="lname" value="{{name.last}}">
+    </div>
+
+    <div class="form-group">
+      <label for="tel">Telephone:</label>
+      <input type="tel" formControlName="tel" id="tel">
+      <br/><span class="error" id="error-tel">Please enter a correct Phone Number</span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" id="email">
+      <br/><span class="error" id="error-email">Please enter a correct eMail</span>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" id="search-button" value="Submit">
+    </div>
+  </form>
+</main>
