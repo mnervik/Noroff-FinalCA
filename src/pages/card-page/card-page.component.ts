@@ -58,4 +58,16 @@ export class CardPageComponent implements OnInit, OnDestroy {
   goBack() {
     this.router.navigate(['/dashboard']);
   }
+
+  goHome(){
+    this.router.navigate(['/']);
+  }
+
+  goContact() {
+    this.router.navigate(['/contact']);
+  }
+
+  goAbout() {
+    this.router.navigate(['/about']);
+  }
 }

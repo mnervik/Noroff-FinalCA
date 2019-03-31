@@ -1,12 +1,16 @@
 <main>
-  <!--<div class="container">
-    <div class="card-container" *ngFor="let card of idArr; let i = index">
-      <h4>{{nameArr[i]}}</h4>
-      <img src="{{imageArr[i]}}">
-      <h4>id: {{idArr[i]}}</h4>
-      <a class="btn btn-success" (click)="cardClick(idArr[i])">View More</a>
-    </div>
-  </div>-->
+  <header>
+    <span id="title">Card Game</span>
+    <nav>
+      <ul>
+        <li>
+          <a (click)="goHome()">Home</a>
+          <a (click)="goAbout()">About Us</a>
+          <a (click)="goContact()">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="container">
     <div class="card-container">
@@ -17,9 +21,10 @@
       </button>
 
       <div class="card-info">
-        <p>About: {{card.about}}</p>
-        <p>Rarity: {{card.rarity}}</p>
-        <p>Colors: {{card.color.join()}}</p>
+        <h4>About</h4>
+        <p>{{card.about}}</p>
+        <p><span class="bold">Rarity</span>: {{card.rarity}}</p>
+        <p><span class="bold">Colors</span>: {{card.color.join()}}</p>
       </div>
     </div>
   </div>

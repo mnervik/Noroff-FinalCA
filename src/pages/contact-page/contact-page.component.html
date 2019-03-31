@@ -28,12 +28,16 @@
     <div class="form-group">
       <label for="tel">Telephone:</label>
       <input type="tel" formControlName="tel" id="tel" placeholder="123-234-3456">
-      <br/><span class="error" id="error-tel">Please enter a correct Phone Number</span>
+      <br/><span class="error" id="error-tel">Please enter a correct Phone Number, formatted like<br>
+      <span style="color: green">XXX-XXX-XXXX</span> or
+      <span style="color: green">XXX XXX XXXX</span> or
+      <span style="color: green">XXX.XXX.XXXX</span>
+    </span>
     </div>
 
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" formControlName="email" id="email">
+      <input type="email" formControlName="email" id="email" placeholder="ola@example.com">
       <br/><span class="error" id="error-email">Please enter a correct eMail</span>
     </div>
 

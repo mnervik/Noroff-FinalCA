@@ -98,3 +98,21 @@ form#contact {
     height: 30px;
   }
 }
+
+
+.bold {
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 4px;
+
+  &.btn-cancel {
+    background-color: palevioletred;
+  }
+
+  &.btn-success {
+    background-color: lightgreen;
+  }
+}
