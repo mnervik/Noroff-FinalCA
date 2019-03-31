@@ -33,8 +33,45 @@ export class ContactPageComponent implements OnInit {
     this.router.navigate(['/dashboard']);
   }
 
-  onSubmit(){
-    console.log('Validate!');
+  onSubmit() {
+    /* Reset Error */
+    for (let i = 0; i < document.getElementsByClassName('error').length; i++) {
+      //@ts-ignore
+      document.getElementsByClassName('error')[i].style.display = 'none';
+    }
+
+    /* Tel Field */
+    let telError = document.getElementById('error-tel');
+    let telField = document.querySelector('input[type="tel"]');
+    //@ts-ignore
+    let telValue = telField.value;
+
+    /* Email Field */
+    let emailError = document.getElementById('error-email');
+    let emailField = document.querySelector('input[type="email"]');
+    //@ts-ignore
+    let emailValue = emailField.value;
+
+    /* Validation */
+    if (!this.validateEmail(emailValue)) emailError.style.display = 'block';
+    if (!this.validateTlf(telValue)) telError.style.display = 'block';
+  }
+
+  validateEmail(email) {
+    if (!email.length) return false;
+
+    let re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
+  validateTlf(tlf) {
+    if (!tlf.length) return false;
+
+    let re_space = /^\d{3} \d{3} \d{4}$/;
+    let re_dash = /^\d{3}-\d{3}-\d{4}$/;
+    let re_dot = /^\d{3}.\d{3}.\d{4}$/;
+
+    return (re_space.test(tlf) || re_dash.test(tlf) || re_dot.test(tlf))
   }
 
   goHome() {
